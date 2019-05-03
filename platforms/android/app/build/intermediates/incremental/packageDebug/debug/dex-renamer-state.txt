@@ -1,0 +1,4 @@
+#Fri May 03 20:00:05 BRT 2019
+base.0=/home/dobbin/projetos/equipe_cao/platforms/android/app/build/intermediates/transforms/dexMerger/debug/0
+path.0=classes.dex
+renamed.0=classes.dex

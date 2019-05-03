@@ -1,0 +1,82 @@
+<ion-content>
+  <div class="question_slider">
+    <div class="container green larger">
+      <ion-slides
+        #slides
+        pager="true"
+        [options]="slideOpts"
+        (ionSlideDidChange)="slideChanged()"
+      >
+        <ion-slide>
+          <h1>Eaí, qual é seu objetivo?</h1>
+          <div class="circle">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <ion-avatar>
+              <img src="../../assets/img/estudante.png" />
+            </ion-avatar>
+          </div>
+          <h1>Estudar</h1>
+        </ion-slide>
+        <ion-slide>
+          <h1>Eaí, qual é seu objetivo?</h1>
+          <div class="circle">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <ion-avatar>
+              <img src="../../assets/img/business-man.png" />
+            </ion-avatar>
+          </div>
+          <h1>Estudar e trabalhar</h1>
+        </ion-slide>
+      </ion-slides>
+    </div>
+    <div class="container smaller">
+      <ion-progress-bar value="0.1"></ion-progress-bar>
+
+      <div class="padding">
+        <div class="info">
+          <div>
+            <ion-icon name="bulb"></ion-icon>
+          </div>
+          <p *ngIf="slideIndex === 0" class="animated slideInRight">
+            Oportunidade única de desenvolver habilidades do idioma no país onde
+            ele é falado, com professores especializados e apoio de material
+            didático e ótimas instalações. Todas as escolas são de excelente
+            qualidade e escolhidas criteriosamente pela equipe de experts da
+            Experimento.
+          </p>
+          <p *ngIf="slideIndex === 1" class="animated slideInRight">
+            Que tal aprimorar o idioma com uma experiência de estudo e trabalho
+            no exterior? Já pensou em receber um salário em dólar ou euro e de
+            quebra custear uma parte das despesas durante o seu intercâmbio no
+            exterior? ou até mesmo fazer um trabalho voluntário?
+          </p>
+        </div>
+        <ion-button
+          size="large"
+          expand="full"
+          shape="round"
+          color="verdetop"
+          class="animated bounceIn"
+          (click)="continue()"
+        >
+          <span *ngIf="!continuarLoading && !sucesso">Continuar</span>
+          <ion-spinner
+            name="crescent"
+            *ngIf="continuarLoading && !sucesso"
+          ></ion-spinner>
+          <ion-icon
+            name="thumbs-up"
+            *ngIf="sucesso"
+            class="animated slideInUp"
+          ></ion-icon>
+        </ion-button>
+      </div>
+    </div>
+  </div>
+</ion-content>
