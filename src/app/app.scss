@@ -60,6 +60,20 @@
         }
       }
     }
+    &.lightblue {
+      background: var(--ion-color-azulclarotop);
+      ion-slides {
+        ion-slide {
+          .circle {
+            div {
+              &:nth-child(3) {
+                background: var(--ion-color-azulclarotop);
+              }
+            }
+          }
+        }
+      }
+    }
     &.orange {
       background: var(--ion-color-laranjatop);
       ion-slides {
@@ -350,4 +364,13 @@
   --ion-color-contrast-rgb: 255, 255, 255;
   --ion-color-shade: #efa222;
   --ion-color-tint: #f7ad32;
+}
+
+.ion-color-azulclarotop {
+  --ion-color-base: #2380f7;
+  --ion-color-base-rgb: 35, 128, 247;
+  --ion-color-contrast: #fff;
+  --ion-color-contrast-rgb: 255, 255, 255;
+  --ion-color-shade: #2174e0;
+  --ion-color-tint: #2382ff;
 }

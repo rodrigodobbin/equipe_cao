@@ -20,12 +20,13 @@ const routes: Routes = [
     path: "pais/:tipoInter/:faixaEtaria/:acomodacao/:escolaridade",
     loadChildren: "./pais/pais.module#PaisPageModule"
   },
-
-  // nivel
-
+  {
+    path: "idioma/:tipoInter/:faixaEtaria/:acomodacao/:escolaridade/:pais",
+    loadChildren: "./idioma/idioma.module#IdiomaPageModule"
+  },
   {
     path:
-      "genero/:tipoInter/:faixaEtaria/:acomodacao/:escolaridade/:pais:/:nivel",
+      "genero/:tipoInter/:faixaEtaria/:acomodacao/:escolaridade/:pais/:nivel",
     loadChildren: "./genero/genero.module#GeneroPageModule"
   }
 ];

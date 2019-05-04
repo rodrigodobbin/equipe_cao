@@ -1,18 +1,19 @@
-import { Component, OnInit, ViewChild } from "@angular/core";
+import { Component, ViewChild } from "@angular/core";
 import { Router, ActivatedRoute } from "@angular/router";
 
 @Component({
-  selector: "app-pais",
-  templateUrl: "./pais.page.html",
-  styleUrls: ["./pais.page.scss"]
+  selector: "app-idioma",
+  templateUrl: "./idioma.page.html",
+  styleUrls: ["./idioma.page.scss"]
 })
-export class PaisPage implements OnInit {
+export class IdiomaPage {
   @ViewChild("slides") slides;
 
   tipoInter;
   faixaEtaria;
   acomodacao;
   escolaridade;
+  pais;
 
   slideIndex = 0;
   slideOpts = {
@@ -29,32 +30,21 @@ export class PaisPage implements OnInit {
     this.faixaEtaria = this.actRoute.snapshot.params["faixaEtaria"];
     this.acomodacao = this.actRoute.snapshot.params["acomodacao"];
     this.escolaridade = this.actRoute.snapshot.params["escolaridade"];
-  }
-
-  slideChanged() {
-    this.slides.getActiveIndex().then(index => {
-      this.slideIndex = index;
-    });
+    this.pais = this.actRoute.snapshot.params["pais"];
   }
 
   continue() {
     if (this.continuarLoading) return;
 
     this.continuarLoading = true;
-    let destinos;
+    let nivel;
 
-    if (this.slideIndex == 0) {
-      destinos = "IRL";
-    } else if (this.slideIndex == 1) {
-      destinos = "CAN";
-    } else if (this.slideIndex == 2) {
-      destinos = "AUS";
-    } else if (this.slideIndex == 3) {
-      destinos = "NZL";
-    } else if (this.slideIndex == 4) {
-      destinos = "EUA";
-    } else if (this.slideIndex == 5) {
-      destinos = "ZA";
+    if (this.slideIndex === 0) {
+      nivel = "B";
+    } else if (this.slideIndex === 1) {
+      nivel = "I";
+    } else if (this.slideIndex === 2) {
+      nivel = "A";
     }
 
     setTimeout(() => {
@@ -63,9 +53,9 @@ export class PaisPage implements OnInit {
 
     setTimeout(() => {
       this.router.navigate([
-        `/idioma/${this.tipoInter}/${this.faixaEtaria}/${this.acomodacao}/${
+        `/genero/${this.tipoInter}/${this.faixaEtaria}/${this.acomodacao}/${
           this.escolaridade
-        }/${destinos}`
+        }/${this.pais}/${nivel}`
       ]);
     }, 1200);
 
@@ -73,5 +63,11 @@ export class PaisPage implements OnInit {
       this.sucesso = false;
       this.continuarLoading = false;
     }, 1600);
+  }
+
+  slideChanged() {
+    this.slides.getActiveIndex().then(index => {
+      this.slideIndex = index;
+    });
   }
 }

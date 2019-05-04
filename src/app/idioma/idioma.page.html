@@ -1,0 +1,103 @@
+<ion-content>
+    <div class="question_slider">
+      <div class="container lightblue larger">
+        <ion-slides
+          #slides
+          pager="true"
+          [options]="slideOpts"
+          (ionSlideDidChange)="slideChanged()"
+        >
+          <ion-slide>
+            <h1>Qual seu nível no idioma escolhido?</h1>
+            <div class="circle">
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <ion-avatar>
+                <img src="../../assets/img/basico.png" />
+              </ion-avatar>
+            </div>
+            <h1>Básico</h1>
+          </ion-slide>
+          <ion-slide>
+            <h1>Qual seu nível no idioma escolhido?</h1>
+            <div class="circle">
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <ion-avatar>
+                <img src="../../assets/img/intermediario.png" />
+              </ion-avatar>
+            </div>
+            <h1>Intermediário</h1>
+          </ion-slide>
+          <ion-slide>
+              <h1>Qual seu nível no idioma escolhido?</h1>
+              <div class="circle">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <ion-avatar>
+                  <img src="../../assets/img/avancado.png" />
+                </ion-avatar>
+              </div>
+              <h1>Avançado</h1>
+            </ion-slide>
+        </ion-slides>
+      </div>
+      <div class="container smaller">
+        <ion-progress-bar value="0.8"></ion-progress-bar>
+  
+        <div class="padding">
+          <div class="info">
+            <div>
+              <ion-icon name="bulb"></ion-icon>
+            </div>
+            <p *ngIf="slideIndex === 0" class="animated slideInRight">
+                Basico - Inglês básico: é quando conseguimos compreender e usar 
+                expressões familiares e cotidianas, assim como enunciados bem 
+                simples. Conseguir se apresentar, apresentar os outros, perguntar 
+                e dar respostas como o local onde vive, as pessoas que conhece e 
+                as coisas que possui. Resumindo, conseguir se comunicar de modo simples.
+            </p>
+            <p *ngIf="slideIndex === 1" class="animated slideInRight">
+                Inglês intermediário: Consideramos intermdiário quando é possivel compreender 
+                as questões principais em textos complexos (assuntos concretos e abstratos), além 
+                de participações de discussões técnicas na sua área de especialidade.
+            </p>
+
+            <p *ngIf="slideIndex === 2" class="animated slideInRight">
+                Avançado  - Inglês avançado: Consideramos a capacidade de compreender 
+                um vasto número de textos longos e exigentes, reconhecendo os seus 
+                significados implícitos. Significa  se expressar de forma fluente e 
+                espontânea sem precisar procurar muito as palavras, usa o idioma de modo 
+                flexível e eficaz para fins sociais, acadêmicos e profissionais.
+              </p>
+          </div>
+          <ion-button
+            size="large"
+            expand="full"
+            shape="round"
+            color="azulclarotop"
+            class="animated bounceIn"
+            (click)="continue()"
+          >
+            <span *ngIf="!continuarLoading && !sucesso">Continuar</span>
+            <ion-spinner
+              name="crescent"
+              *ngIf="continuarLoading && !sucesso"
+            ></ion-spinner>
+            <ion-icon
+              name="thumbs-up"
+              *ngIf="sucesso"
+              class="animated slideInUp"
+            ></ion-icon>
+          </ion-button>
+        </div>
+      </div>
+    </div>
+  </ion-content>
+  
