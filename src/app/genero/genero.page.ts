@@ -61,5 +61,19 @@ export class GeneroPage implements OnInit {
       this.sucesso = false;
       this.continuarLoading = false;
     }, 1600);
+
+    setTimeout(() => {
+      this.router.navigate([
+        `/crianca/${this.tipoInter}/${this.faixaEtaria}/${
+          this.acomodacao
+        }/${this.escolaridade}/${this.pais}/${this.nivel}/${this.genero}`
+      ]);
+
+      console.log("testando");
+
+    }, 1200);
+
+    
+
   }
 }
