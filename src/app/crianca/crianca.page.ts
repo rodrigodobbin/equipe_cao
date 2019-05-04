@@ -2,20 +2,19 @@ import { Component, OnInit } from "@angular/core";
 import { ActivatedRoute, Router } from "@angular/router";
 
 @Component({
-  selector: "app-genero",
-  templateUrl: "./genero.page.html",
-  styleUrls: ["./genero.page.scss"]
+  selector: "app-crianca",
+  templateUrl: "./crianca.page.html",
+  styleUrls: ["./crianca.page.scss"]
 })
-export class GeneroPage implements OnInit {
+export class CriancaPage implements OnInit {
   tipoInter;
   faixaEtaria;
   acomodacao;
   escolaridade;
   pais;
   nivel;
-
-  genero = "M";
-  generoTexto = "Masculino";
+  genero;
+  gostaCrianca = "T";
 
   continuarLoading = false;
   sucesso = false;
@@ -29,19 +28,7 @@ export class GeneroPage implements OnInit {
     this.escolaridade = this.actRoute.snapshot.params["escolaridade"];
     this.pais = this.actRoute.snapshot.params["pais"];
     this.nivel = this.actRoute.snapshot.params["nivel"];
-  }
-
-  escolheGenero(tipo) {
-    switch (tipo) {
-      case "M":
-        this.genero = "M";
-        this.generoTexto = "Masculino";
-        break;
-      case "F":
-        this.genero = "F";
-        this.generoTexto = "Feminino";
-        break;
-    }
+    this.genero = this.actRoute.snapshot.params["genero"];
   }
 
   continue() {
@@ -55,9 +42,9 @@ export class GeneroPage implements OnInit {
 
     setTimeout(() => {
       this.router.navigate([
-        `/crianca/${this.tipoInter}/${this.faixaEtaria}/${this.acomodacao}/${
+        `/duracao/${this.tipoInter}/${this.faixaEtaria}/${this.acomodacao}/${
           this.escolaridade
-        }/${this.pais}/${this.nivel}/${this.genero}`
+        }/${this.pais}/${this.nivel}/${this.genero}/${this.gostaCrianca}`
       ]);
     }, 1200);
 

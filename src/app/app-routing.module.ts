@@ -31,8 +31,19 @@ const routes: Routes = [
   },
   {
     path:
+      "crianca/:tipoInter/:faixaEtaria/:acomodacao/:escolaridade/:pais/:nivel/:genero",
+    loadChildren: "./crianca/crianca.module#CriancaPageModule"
+  },
+  {
+    path:
       "duracao/:tipoInter/:faixaEtaria/:acomodacao/:escolaridade/:pais/:nivel/:genero/:gostaCrianca",
     loadChildren: "./duracao/duracao.module#DuracaoPageModule"
+  },
+
+  {
+    path: "resultadoprograma",
+    loadChildren:
+      "./resultadoprograma/resultadoprograma.module#ResultadoprogramaPageModule"
   }
 ];
 

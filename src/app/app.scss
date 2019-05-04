@@ -1,3 +1,17 @@
+.resultado {
+  display: flex;
+  flex-flow: column;
+  height: 100vh;
+  .blue_container {
+    background: var(--ion-color-azulclarotop);
+    color: #fff;
+  }
+  .white_container {
+    background: #fff;
+    color: #000;
+  }
+}
+
 .question_slider {
   display: flex;
   flex-flow: column;
