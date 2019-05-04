@@ -11,6 +11,22 @@ const routes: Routes = [
   {
     path: "hospedagem/:tipoInter/:faixaEtaria",
     loadChildren: "./hospedagem/hospedagem.module#HospedagemPageModule"
+  },
+  {
+    path: "formacao/:tipoInter/:faixaEtaria/:acomodacao",
+    loadChildren: "./formacao/formacao.module#FormacaoPageModule"
+  },
+  {
+    path: "pais/:tipoInter/:faixaEtaria/:acomodacao/:escolaridade",
+    loadChildren: "./pais/pais.module#PaisPageModule"
+  },
+
+  // nivel
+
+  {
+    path:
+      "genero/:tipoInter/:faixaEtaria/:acomodacao/:escolaridade/:pais:/:nivel",
+    loadChildren: "./genero/genero.module#GeneroPageModule"
   }
 ];
 

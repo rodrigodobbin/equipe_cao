@@ -21,9 +21,6 @@ export class HospedagemPage implements OnInit {
   ngOnInit() {
     this.tipoInter = this.actRoute.snapshot.params["tipoInter"];
     this.faixaEtaria = this.actRoute.snapshot.params["faixaEtaria"];
-
-    console.log("tipoInter", this.tipoInter);
-    console.log("faixaEtaria", this.faixaEtaria);
   }
 
   escolheAcomodacao(tipo) {
@@ -62,7 +59,7 @@ export class HospedagemPage implements OnInit {
 
     setTimeout(() => {
       this.router.navigate([
-        `/hospedagem/${this.tipoInter}/${this.faixaEtaria}/${this.acomodacao}`
+        `/formacao/${this.tipoInter}/${this.faixaEtaria}/${this.acomodacao}`
       ]);
     }, 1200);
 

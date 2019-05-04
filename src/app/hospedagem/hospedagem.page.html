@@ -1,12 +1,7 @@
 <ion-content>
   <div class="question_slider">
-    <div class="container purple larger">
-      <ion-slides
-        #slides
-        pager="false"
-        [options]="slideOpts"
-        (ionSlideDidChange)="slideChanged()"
-      >
+    <div class="container purple">
+      <ion-slides #slides pager="false" [options]="slideOpts">
         <ion-slide>
           <h1>Quer ficar hospedado onde?</h1>
           <div class="circle">

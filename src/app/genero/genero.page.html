@@ -1,0 +1,73 @@
+<ion-content>
+  <div class="question_slider">
+    <div class="container purple">
+      <ion-slides #slides pager="false" [options]="slideOpts">
+        <ion-slide>
+          <h1>Qual seu gênero?</h1>
+          <div class="circle">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <ion-avatar>
+              <p class="text">{{ generoTexto }}</p>
+            </ion-avatar>
+            <div
+              class="masculino generos animated zoomInUp"
+              [ngClass]="{ active: genero === 'M' }"
+              (click)="escolheGenero('M')"
+            >
+              <img src="../../assets/img/masculino.png" />
+            </div>
+            <div
+              class="feminino generos animated zoomInDown"
+              [ngClass]="{ active: genero === 'F' }"
+              (click)="escolheGenero('F')"
+            >
+              <img src="../../assets/img/feminino.png" />
+            </div>
+          </div>
+        </ion-slide>
+      </ion-slides>
+    </div>
+    <div class="container smaller">
+      <ion-progress-bar value="0.45"></ion-progress-bar>
+
+      <div class="padding">
+        <div class="info">
+          <div>
+            <ion-icon name="bulb"></ion-icon>
+          </div>
+          <p class="animated fadeIn" *ngIf="genero === 'M'">
+            Para ser Aupair no Estados Unidos você precisa ser mulher e ter de
+            18-26 anos.
+          </p>
+          <p class="animated fadeIn" *ngIf="genero === 'F'">
+            Para ser Demipair na Austrália você precisa ser homem e ter de 18-26
+            anos.
+          </p>
+        </div>
+        <ion-button
+          size="large"
+          expand="full"
+          shape="round"
+          color="roxotop"
+          class="animated fadeIn"
+          (click)="continue()"
+          [disabled]="!genero"
+        >
+          <span *ngIf="!continuarLoading && !sucesso">Continuar</span>
+          <ion-spinner
+            name="crescent"
+            *ngIf="continuarLoading && !sucesso"
+          ></ion-spinner>
+          <ion-icon
+            name="thumbs-up"
+            *ngIf="sucesso"
+            class="animated slideInUp"
+          ></ion-icon>
+        </ion-button>
+      </div>
+    </div>
+  </div>
+</ion-content>

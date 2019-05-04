@@ -1,0 +1,100 @@
+<ion-content>
+  <div class="question_slider">
+    <div class="container pink larger">
+      <ion-slides
+        #slides
+        pager="true"
+        [options]="slideOpts"
+        (ionSlideDidChange)="slideChanged()"
+      >
+        <ion-slide>
+          <h1>Qual a sua formação acadêmica?</h1>
+          <div class="circle">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <ion-avatar>
+              <img src="../../assets/img/ensino-fundamental.png" />
+            </ion-avatar>
+          </div>
+          <h1>Ensino fundamental</h1>
+        </ion-slide>
+        <ion-slide>
+          <h1>Qual a sua formação acadêmica?</h1>
+          <div class="circle">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <ion-avatar>
+              <img src="../../assets/img/ensino-medio.png" />
+            </ion-avatar>
+          </div>
+          <h1>Ensino médio</h1>
+        </ion-slide>
+        <ion-slide>
+          <h1>Qual a sua formação acadêmica?</h1>
+          <div class="circle">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <ion-avatar>
+              <img src="../../assets/img/estudante.png" />
+            </ion-avatar>
+          </div>
+          <h1>Ensino médio completo</h1>
+        </ion-slide>
+      </ion-slides>
+    </div>
+    <div class="container smaller">
+      <ion-progress-bar value="0.5"></ion-progress-bar>
+
+      <div class="padding">
+        <div class="info">
+          <div>
+            <ion-icon name="bulb"></ion-icon>
+          </div>
+          <p *ngIf="slideIndex === 0" class="animated fadeIn">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reiciendis
+            iure id nemo quibusdam, libero accusantium. Eum, cupiditate pariatur
+            voluptates porro tempore, suscipit aut voluptatibus delectus esse
+            voluptatum, neque harum quos.
+          </p>
+          <p *ngIf="slideIndex === 1" class="animated fadeIn">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. A itaque
+            voluptatibus debitis quidem adipisci, temporibus ad nam quae totam
+            veniam dolor dicta id nostrum repellendus fugiat cum odio dolores
+            autem.
+          </p>
+          <p *ngIf="slideIndex === 2" class="animated fadeIn">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas
+            ipsa ratione alias ipsum laboriosam minus fuga, hic asperiores
+            fugiat quod molestiae unde, neque non, debitis excepturi recusandae
+            ab molestias dolorum?
+          </p>
+        </div>
+        <ion-button
+          size="large"
+          expand="full"
+          shape="round"
+          color="rosatop"
+          class="animated bounceIn"
+          (click)="continue()"
+        >
+          <span *ngIf="!continuarLoading && !sucesso">Continuar</span>
+          <ion-spinner
+            name="crescent"
+            *ngIf="continuarLoading && !sucesso"
+          ></ion-spinner>
+          <ion-icon
+            name="thumbs-up"
+            *ngIf="sucesso"
+            class="animated slideInUp"
+          ></ion-icon>
+        </ion-button>
+      </div>
+    </div>
+  </div>
+</ion-content>
