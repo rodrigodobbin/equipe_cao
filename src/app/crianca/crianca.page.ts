@@ -31,6 +31,10 @@ export class CriancaPage implements OnInit {
     this.genero = this.actRoute.snapshot.params["genero"];
   }
 
+  segmentChanged(evt) {
+    evt.preventDefault();
+  }
+
   continue() {
     if (this.continuarLoading) return;
 

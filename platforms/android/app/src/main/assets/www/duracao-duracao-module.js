@@ -58,7 +58,7 @@ var DuracaoPageModule = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<ion-header>\n  <ion-toolbar>\n    <ion-title>Tempo de curso</ion-title>\n  </ion-toolbar>\n</ion-header>\n\n<ion-content>\n  <div class=\"animated slideInUp container\">\n    <ion-button\n      shape=\"round\"\n      color=\"dark\"\n      (click)=\"escolheDuracao(2)\"\n      *ngIf=\"duracao !== 2\"\n    >\n      2 Semanas\n    </ion-button>\n    <ion-button\n      shape=\"round\"\n      color=\"laranjatop\"\n      (click)=\"escolheDuracao(0)\"\n      *ngIf=\"duracao === 2\"\n    >\n      2 Semanas\n    </ion-button>\n    <img src=\"../../assets/img/relogio.png\" />\n  </div>\n\n  <div class=\"animated slideInUp container\">\n    <img src=\"../../assets/img/camera.png\" />\n    <ion-button\n      shape=\"round\"\n      color=\"dark\"\n      (click)=\"escolheDuracao(4)\"\n      *ngIf=\"duracao !== 4\"\n    >\n      4 Semanas\n    </ion-button>\n    <ion-button\n      shape=\"round\"\n      color=\"laranjatop\"\n      (click)=\"escolheDuracao(0)\"\n      *ngIf=\"duracao === 4\"\n    >\n      4 Semanas\n    </ion-button>\n  </div>\n\n  <div class=\"animated slideInUp container\">\n    <ion-button\n      shape=\"round\"\n      color=\"dark\"\n      (click)=\"escolheDuracao(6)\"\n      *ngIf=\"duracao !== 6\"\n    >\n      6 Semanas\n    </ion-button>\n    <ion-button\n      shape=\"round\"\n      color=\"laranjatop\"\n      (click)=\"escolheDuracao(0)\"\n      *ngIf=\"duracao === 6\"\n    >\n      6 Semanas\n    </ion-button>\n    <img src=\"../../assets/img/aviao.png\" />\n  </div>\n\n  <div class=\"animated slideInUp container\">\n    <img src=\"../../assets/img/cartao.png\" />\n    <ion-button\n      shape=\"round\"\n      color=\"dark\"\n      (click)=\"escolheDuracao(12)\"\n      *ngIf=\"duracao !== 12\"\n    >\n      12 Semanas\n    </ion-button>\n    <ion-button\n      shape=\"round\"\n      color=\"laranjatop\"\n      (click)=\"escolheDuracao(0)\"\n      *ngIf=\"duracao === 12\"\n    >\n      12 Semanas\n    </ion-button>\n  </div>\n\n  <div class=\"animated slideInUp container\">\n    <ion-button\n      shape=\"round\"\n      color=\"dark\"\n      (click)=\"escolheDuracao(24)\"\n      *ngIf=\"duracao !== 24\"\n    >\n      24 Semanas\n    </ion-button>\n    <ion-button\n      shape=\"round\"\n      color=\"laranjatop\"\n      (click)=\"escolheDuracao(0)\"\n      *ngIf=\"duracao === 24\"\n    >\n      24 Semanas\n    </ion-button>\n    <img src=\"../../assets/img/id.png\" />\n  </div>\n\n  <div class=\"animated slideInUp container\">\n    <img src=\"../../assets/img/globo.png\" />\n    <ion-button\n      shape=\"round\"\n      color=\"dark\"\n      (click)=\"escolheDuracao(36)\"\n      *ngIf=\"duracao !== 36\"\n    >\n      36 Semanas\n    </ion-button>\n    <ion-button\n      shape=\"round\"\n      color=\"laranjatop\"\n      (click)=\"escolheDuracao(0)\"\n      *ngIf=\"duracao === 36\"\n    >\n      36 Semanas\n    </ion-button>\n  </div>\n\n  <div class=\"animated slideInUp container\">\n    <ion-button\n      shape=\"round\"\n      color=\"dark\"\n      (click)=\"escolheDuracao(52)\"\n      *ngIf=\"duracao !== 52\"\n    >\n      52 Semanas\n    </ion-button>\n    <ion-button\n      shape=\"round\"\n      color=\"laranjatop\"\n      (click)=\"escolheDuracao(0)\"\n      *ngIf=\"duracao === 52\"\n    >\n      52 Semanas\n    </ion-button>\n    <img src=\"../../assets/img/musica.png\" />\n  </div>\n\n  <div class=\"animated slideInUp container\">\n    <img src=\"../../assets/img/feliz.png\" />\n    <ion-button\n      shape=\"round\"\n      color=\"dark\"\n      (click)=\"escolheDuracao(156)\"\n      *ngIf=\"duracao !== 156\"\n    >\n      156 Semanas\n    </ion-button>\n    <ion-button\n      shape=\"round\"\n      color=\"laranjatop\"\n      (click)=\"escolheDuracao(0)\"\n      *ngIf=\"duracao === 156\"\n    >\n      156 Semanas\n    </ion-button>\n  </div>\n\n  <div class=\"buttonDiv\">\n    <ion-button\n      size=\"large\"\n      expand=\"full\"\n      shape=\"round\"\n      color=\"laranjatop\"\n      class=\"animated fadeIn\"\n      (click)=\"continue()\"\n      [disabled]=\"!genero\"\n    >\n      <span *ngIf=\"!continuarLoading && !sucesso\">Continuar</span>\n      <ion-spinner\n        name=\"crescent\"\n        *ngIf=\"continuarLoading && !sucesso\"\n      ></ion-spinner>\n      <ion-icon\n        name=\"thumbs-up\"\n        *ngIf=\"sucesso\"\n        class=\"animated slideInUp\"\n      ></ion-icon>\n    </ion-button>\n  </div>\n</ion-content>\n"
+module.exports = "<ion-header>\n  <ion-toolbar>\n    <ion-title>Tempo de curso</ion-title>\n  </ion-toolbar>\n</ion-header>\n\n<ion-content>\n  <div class=\"animated slideInUp container\">\n    <ion-button\n      shape=\"round\"\n      color=\"dark\"\n      (click)=\"escolheDuracao(2)\"\n      *ngIf=\"duracao !== 2\"\n    >\n      2 Semanas\n    </ion-button>\n    <ion-button\n      shape=\"round\"\n      color=\"laranjatop\"\n      (click)=\"escolheDuracao(0)\"\n      *ngIf=\"duracao === 2\"\n    >\n      2 Semanas\n    </ion-button>\n    <img src=\"../../assets/img/relogio.png\" />\n  </div>\n\n  <div class=\"animated slideInUp container\">\n    <img src=\"../../assets/img/camera.png\" />\n    <ion-button\n      shape=\"round\"\n      color=\"dark\"\n      (click)=\"escolheDuracao(4)\"\n      *ngIf=\"duracao !== 4\"\n    >\n      4 Semanas\n    </ion-button>\n    <ion-button\n      shape=\"round\"\n      color=\"laranjatop\"\n      (click)=\"escolheDuracao(0)\"\n      *ngIf=\"duracao === 4\"\n    >\n      4 Semanas\n    </ion-button>\n  </div>\n\n  <div class=\"animated slideInUp container\">\n    <ion-button\n      shape=\"round\"\n      color=\"dark\"\n      (click)=\"escolheDuracao(6)\"\n      *ngIf=\"duracao !== 6\"\n    >\n      6 Semanas\n    </ion-button>\n    <ion-button\n      shape=\"round\"\n      color=\"laranjatop\"\n      (click)=\"escolheDuracao(0)\"\n      *ngIf=\"duracao === 6\"\n    >\n      6 Semanas\n    </ion-button>\n    <img src=\"../../assets/img/aviao.png\" />\n  </div>\n\n  <div class=\"animated slideInUp container\">\n    <img src=\"../../assets/img/cartao.png\" />\n    <ion-button\n      shape=\"round\"\n      color=\"dark\"\n      (click)=\"escolheDuracao(12)\"\n      *ngIf=\"duracao !== 12\"\n    >\n      12 Semanas\n    </ion-button>\n    <ion-button\n      shape=\"round\"\n      color=\"laranjatop\"\n      (click)=\"escolheDuracao(0)\"\n      *ngIf=\"duracao === 12\"\n    >\n      12 Semanas\n    </ion-button>\n  </div>\n\n  <div class=\"animated slideInUp container\">\n    <ion-button\n      shape=\"round\"\n      color=\"dark\"\n      (click)=\"escolheDuracao(24)\"\n      *ngIf=\"duracao !== 24\"\n    >\n      24 Semanas\n    </ion-button>\n    <ion-button\n      shape=\"round\"\n      color=\"laranjatop\"\n      (click)=\"escolheDuracao(0)\"\n      *ngIf=\"duracao === 24\"\n    >\n      24 Semanas\n    </ion-button>\n    <img src=\"../../assets/img/id.png\" />\n  </div>\n\n  <div class=\"animated slideInUp container\">\n    <img src=\"../../assets/img/globo.png\" />\n    <ion-button\n      shape=\"round\"\n      color=\"dark\"\n      (click)=\"escolheDuracao(36)\"\n      *ngIf=\"duracao !== 36\"\n    >\n      36 Semanas\n    </ion-button>\n    <ion-button\n      shape=\"round\"\n      color=\"laranjatop\"\n      (click)=\"escolheDuracao(0)\"\n      *ngIf=\"duracao === 36\"\n    >\n      36 Semanas\n    </ion-button>\n  </div>\n\n  <div class=\"animated slideInUp container\">\n    <ion-button\n      shape=\"round\"\n      color=\"dark\"\n      (click)=\"escolheDuracao(52)\"\n      *ngIf=\"duracao !== 52\"\n    >\n      52 Semanas\n    </ion-button>\n    <ion-button\n      shape=\"round\"\n      color=\"laranjatop\"\n      (click)=\"escolheDuracao(0)\"\n      *ngIf=\"duracao === 52\"\n    >\n      52 Semanas\n    </ion-button>\n    <img src=\"../../assets/img/musica.png\" />\n  </div>\n\n  <div class=\"animated slideInUp container\">\n    <img src=\"../../assets/img/feliz.png\" />\n    <ion-button\n      shape=\"round\"\n      color=\"dark\"\n      (click)=\"escolheDuracao(156)\"\n      *ngIf=\"duracao !== 156\"\n    >\n      156 Semanas\n    </ion-button>\n    <ion-button\n      shape=\"round\"\n      color=\"laranjatop\"\n      (click)=\"escolheDuracao(0)\"\n      *ngIf=\"duracao === 156\"\n    >\n      156 Semanas\n    </ion-button>\n  </div>\n\n  <div class=\"buttonDiv\">\n    <ion-button\n      size=\"large\"\n      expand=\"full\"\n      shape=\"round\"\n      color=\"laranjatop\"\n      class=\"animated fadeIn\"\n      (click)=\"continue()\"\n      [disabled]=\"duracao === 0\"\n    >\n      <span *ngIf=\"!continuarLoading && !sucesso\">Finalizar</span>\n      <ion-spinner\n        name=\"crescent\"\n        *ngIf=\"continuarLoading && !sucesso\"\n      ></ion-spinner>\n      <ion-icon\n        name=\"thumbs-up\"\n        *ngIf=\"sucesso\"\n        class=\"animated slideInUp\"\n      ></ion-icon>\n    </ion-button>\n  </div>\n</ion-content>\n"
 
 /***/ }),
 
@@ -86,13 +86,19 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
+/* harmony import */ var _programas_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../programas.service */ "./src/app/programas.service.ts");
+
 
 
 
 var DuracaoPage = /** @class */ (function () {
-    function DuracaoPage(actRoute) {
+    function DuracaoPage(actRoute, programaService, router) {
         this.actRoute = actRoute;
+        this.programaService = programaService;
+        this.router = router;
         this.duracao = 0;
+        this.continuarLoading = false;
+        this.sucesso = false;
     }
     DuracaoPage.prototype.ngOnInit = function () {
         this.tipoInter = this.actRoute.snapshot.params["tipoInter"];
@@ -108,7 +114,49 @@ var DuracaoPage = /** @class */ (function () {
         this.duracao = duracao;
     };
     DuracaoPage.prototype.continue = function () {
-        console.log("integração back-end");
+        var _this = this;
+        if (this.continuarLoading)
+            return;
+        this.continuarLoading = true;
+        var programa = {
+            tipoInter: this.tipoInter,
+            faixaEtaria: this.faixaEtaria,
+            acomodacao: [this.acomodacao],
+            nivel: [this.nivel],
+            escolaridade: [this.escolaridade],
+            destinos: [this.pais],
+            duracao: this.duracao,
+            gostaCrianca: this.gostaCrianca === "T" ? true : false,
+            sexo: this.genero
+        };
+        var variavel = [];
+        variavel["Cursos de idiomas"] = "CI";
+        variavel["Programa de Férias"] = "PF";
+        variavel["High School"] = "HS";
+        variavel["Telefone da Experimento"] = "TE";
+        variavel[""] = "TE";
+        variavel["Programa Universitário e Programa Profissional"] = "PUPP";
+        variavel["Programa Universitário"] = "PU";
+        variavel["Formação Profissional"] = "FP";
+        variavel["Trabalho voluntário"] = "TV";
+        variavel["Aupair"] = "AU";
+        variavel["Demi pair"] = "DEMI";
+        this.programaService.envia(programa).subscribe(function (programa) {
+            _this.sucesso = true;
+            setTimeout(function () {
+                _this.router.navigate([
+                    "/resultadoprograma/" + variavel[programa.cursoCode ? programa.cursoCode : ""]
+                ]);
+            }, 500);
+            setTimeout(function () {
+                _this.sucesso = false;
+                _this.continuarLoading = false;
+            }, 1000);
+        }, function () {
+            alert("Ocorreu um erro inesperado");
+            _this.sucesso = false;
+            _this.continuarLoading = false;
+        });
     };
     DuracaoPage = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
@@ -116,9 +164,47 @@ var DuracaoPage = /** @class */ (function () {
             template: __webpack_require__(/*! ./duracao.page.html */ "./src/app/duracao/duracao.page.html"),
             styles: [__webpack_require__(/*! ./duracao.page.scss */ "./src/app/duracao/duracao.page.scss")]
         }),
-        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_angular_router__WEBPACK_IMPORTED_MODULE_2__["ActivatedRoute"]])
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_angular_router__WEBPACK_IMPORTED_MODULE_2__["ActivatedRoute"],
+            _programas_service__WEBPACK_IMPORTED_MODULE_3__["ProgramasService"],
+            _angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"]])
     ], DuracaoPage);
     return DuracaoPage;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/programas.service.ts":
+/*!**************************************!*\
+  !*** ./src/app/programas.service.ts ***!
+  \**************************************/
+/*! exports provided: ProgramasService */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ProgramasService", function() { return ProgramasService; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm5/http.js");
+
+
+
+var ProgramasService = /** @class */ (function () {
+    function ProgramasService(_http) {
+        this._http = _http;
+    }
+    ProgramasService.prototype.envia = function (programa) {
+        return this._http.post('http://34.201.76.22:7854/getTipo', programa);
+    };
+    ProgramasService = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])({
+            providedIn: 'root'
+        }),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpClient"]])
+    ], ProgramasService);
+    return ProgramasService;
 }());
 
 

@@ -1,7 +1,7 @@
 <ion-content>
   <div class="question_slider">
     <div class="container pink larger">
-      <ion-slides #slides pager="false" [options]="slideOpts">
+      <ion-slides #slides pager="false">
         <ion-slide>
           <h1>Vc tem experiência com criança?</h1>
           <div class="circle">
@@ -16,7 +16,11 @@
 
           <br />
 
-          <ion-segment mode="ios" [(ngModel)]="gostaCrianca" color="laranjatop">
+          <ion-segment
+            [(ngModel)]="gostaCrianca"
+            color="laranjatop"
+            (ionChange)="segmentChanged($event)"
+          >
             <ion-segment-button value="T">
               <ion-label>Sim</ion-label>
             </ion-segment-button>

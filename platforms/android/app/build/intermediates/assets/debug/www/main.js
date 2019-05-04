@@ -833,6 +833,10 @@ module.exports = webpackAsyncContext;
 /***/ (function(module, exports, __webpack_require__) {
 
 var map = {
+	"./crianca/crianca.module": [
+		"./src/app/crianca/crianca.module.ts",
+		"crianca-crianca-module"
+	],
 	"./duracao/duracao.module": [
 		"./src/app/duracao/duracao.module.ts",
 		"duracao-duracao-module"
@@ -861,9 +865,17 @@ var map = {
 		"./src/app/idioma/idioma.module.ts",
 		"idioma-idioma-module"
 	],
+	"./obrigado/obrigado.module": [
+		"./src/app/obrigado/obrigado.module.ts",
+		"obrigado-obrigado-module"
+	],
 	"./pais/pais.module": [
 		"./src/app/pais/pais.module.ts",
 		"pais-pais-module"
+	],
+	"./resultadoprograma/resultadoprograma.module": [
+		"./src/app/resultadoprograma/resultadoprograma.module.ts",
+		"resultadoprograma-resultadoprograma-module"
 	]
 };
 function webpackAsyncContext(req) {
@@ -932,9 +944,18 @@ var routes = [
         loadChildren: "./genero/genero.module#GeneroPageModule"
     },
     {
+        path: "crianca/:tipoInter/:faixaEtaria/:acomodacao/:escolaridade/:pais/:nivel/:genero",
+        loadChildren: "./crianca/crianca.module#CriancaPageModule"
+    },
+    {
         path: "duracao/:tipoInter/:faixaEtaria/:acomodacao/:escolaridade/:pais/:nivel/:genero/:gostaCrianca",
         loadChildren: "./duracao/duracao.module#DuracaoPageModule"
-    }
+    },
+    {
+        path: "resultadoprograma/:tipoPrograma",
+        loadChildren: "./resultadoprograma/resultadoprograma.module#ResultadoprogramaPageModule"
+    },
+    { path: 'obrigado', loadChildren: './obrigado/obrigado.module#ObrigadoPageModule' }
 ];
 var AppRoutingModule = /** @class */ (function () {
     function AppRoutingModule() {

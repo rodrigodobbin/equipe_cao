@@ -1,12 +1,7 @@
 <ion-content>
   <div class="question_slider">
     <div class="container blue">
-      <ion-slides
-        #slides
-        pager="false"
-        [options]="slideOpts"
-        (ionSlideDidChange)="slideChanged()"
-      >
+      <ion-slides #slides pager="false">
         <ion-slide>
           <h1>
             <span *ngIf="!dia && !mes && !ano"

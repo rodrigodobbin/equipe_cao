@@ -9,7 +9,7 @@ INJECTED from /home/dobbin/projetos/equipe_cao/platforms/android/app/src/main/An
 INJECTED from /home/dobbin/projetos/equipe_cao/platforms/android/app/src/main/AndroidManifest.xml:2:1-14:12
 INJECTED from /home/dobbin/projetos/equipe_cao/platforms/android/app/src/main/AndroidManifest.xml:2:1-14:12
 	package
-		ADDED from /home/dobbin/projetos/equipe_cao/platforms/android/app/src/main/AndroidManifest.xml:2:98-124
+		ADDED from /home/dobbin/projetos/equipe_cao/platforms/android/app/src/main/AndroidManifest.xml:2:98-137
 		INJECTED from /home/dobbin/projetos/equipe_cao/platforms/android/app/src/main/AndroidManifest.xml
 		INJECTED from /home/dobbin/projetos/equipe_cao/platforms/android/app/src/main/AndroidManifest.xml
 	android:versionName
@@ -19,7 +19,7 @@ INJECTED from /home/dobbin/projetos/equipe_cao/platforms/android/app/src/main/An
 	android:hardwareAccelerated
 		ADDED from /home/dobbin/projetos/equipe_cao/platforms/android/app/src/main/AndroidManifest.xml:2:11-45
 	xmlns:android
-		ADDED from /home/dobbin/projetos/equipe_cao/platforms/android/app/src/main/AndroidManifest.xml:2:125-183
+		ADDED from /home/dobbin/projetos/equipe_cao/platforms/android/app/src/main/AndroidManifest.xml:2:138-196
 	android:versionCode
 		ADDED from /home/dobbin/projetos/equipe_cao/platforms/android/app/src/main/AndroidManifest.xml:2:46-69
 		INJECTED from /home/dobbin/projetos/equipe_cao/platforms/android/app/src/main/AndroidManifest.xml
@@ -52,7 +52,7 @@ ADDED from /home/dobbin/projetos/equipe_cao/platforms/android/app/src/main/Andro
 		ADDED from /home/dobbin/projetos/equipe_cao/platforms/android/app/src/main/AndroidManifest.xml:5:18-52
 	android:icon
 		ADDED from /home/dobbin/projetos/equipe_cao/platforms/android/app/src/main/AndroidManifest.xml:5:53-80
-activity#io.ionic.starter.MainActivity
+activity#br.tur.reservafacil.equipecao.MainActivity
 ADDED from /home/dobbin/projetos/equipe_cao/platforms/android/app/src/main/AndroidManifest.xml:6:9-11:20
 	android:label
 		ADDED from /home/dobbin/projetos/equipe_cao/platforms/android/app/src/main/AndroidManifest.xml:6:97-134

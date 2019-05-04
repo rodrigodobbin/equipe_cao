@@ -57,7 +57,7 @@ var HomePageModule = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<ion-content>\n  <div class=\"question_slider\">\n    <div class=\"container green larger\">\n      <ion-slides\n        #slides\n        pager=\"true\"\n        [options]=\"slideOpts\"\n        (ionSlideDidChange)=\"slideChanged()\"\n      >\n        <ion-slide>\n          <h1>Eaí, qual é seu objetivo?</h1>\n          <div class=\"circle\">\n            <div></div>\n            <div></div>\n            <div></div>\n            <div></div>\n            <ion-avatar>\n              <img src=\"../../assets/img/estudante.png\" />\n            </ion-avatar>\n          </div>\n          <h1>Estudar</h1>\n        </ion-slide>\n        <ion-slide>\n          <h1>Eaí, qual é seu objetivo?</h1>\n          <div class=\"circle\">\n            <div></div>\n            <div></div>\n            <div></div>\n            <div></div>\n            <ion-avatar>\n              <img src=\"../../assets/img/business-man.png\" />\n            </ion-avatar>\n          </div>\n          <h1>Estudar e trabalhar</h1>\n        </ion-slide>\n      </ion-slides>\n    </div>\n    <div class=\"container smaller\">\n      <ion-progress-bar value=\"0.15\"></ion-progress-bar>\n\n      <div class=\"padding\">\n        <div class=\"info\">\n          <div>\n            <ion-icon name=\"bulb\"></ion-icon>\n          </div>\n          <p *ngIf=\"slideIndex === 0\" class=\"animated fadeIn\">\n            Oportunidade única de desenvolver habilidades do idioma no país onde\n            ele é falado, com professores especializados e apoio de material\n            didático e ótimas instalações. Todas as escolas são de excelente\n            qualidade e escolhidas criteriosamente pela equipe de experts da\n            Experimento.\n          </p>\n          <p *ngIf=\"slideIndex === 1\" class=\"animated fadeIn\">\n            Que tal aprimorar o idioma com uma experiência de estudo e trabalho\n            no exterior? Já pensou em receber um salário em dólar ou euro e de\n            quebra custear uma parte das despesas durante o seu intercâmbio no\n            exterior? ou até mesmo fazer um trabalho voluntário?\n          </p>\n        </div>\n        <ion-button\n          size=\"large\"\n          expand=\"full\"\n          shape=\"round\"\n          color=\"verdetop\"\n          class=\"animated bounceIn\"\n          (click)=\"continue()\"\n        >\n          <span *ngIf=\"!continuarLoading && !sucesso\">Continuar</span>\n          <ion-spinner\n            name=\"crescent\"\n            *ngIf=\"continuarLoading && !sucesso\"\n          ></ion-spinner>\n          <ion-icon\n            name=\"thumbs-up\"\n            *ngIf=\"sucesso\"\n            class=\"animated slideInUp\"\n          ></ion-icon>\n        </ion-button>\n      </div>\n    </div>\n  </div>\n</ion-content>\n"
+module.exports = "<ion-content>\n  <div class=\"question_slider\">\n    <div class=\"container green larger\">\n      <ion-slides\n        #slides\n        pager=\"true\"\n        [options]=\"slideOpts\"\n        (ionSlideDidChange)=\"slideChanged()\"\n      >\n        <ion-slide>\n          <h1>Eaí, qual é seu objetivo?</h1>\n          <div class=\"circle\">\n            <div></div>\n            <div></div>\n            <div></div>\n            <div></div>\n            <ion-avatar>\n              <img src=\"../../assets/img/estudante.png\" />\n            </ion-avatar>\n          </div>\n          <h1>Estudar</h1>\n        </ion-slide>\n        <ion-slide>\n          <h1>Eaí, qual é seu objetivo?</h1>\n          <div class=\"circle\">\n            <div></div>\n            <div></div>\n            <div></div>\n            <div></div>\n            <ion-avatar>\n              <img src=\"../../assets/img/business-man.png\" />\n            </ion-avatar>\n          </div>\n          <h1>Estudar e trabalhar</h1>\n        </ion-slide>\n      </ion-slides>\n    </div>\n    <div class=\"container smaller\">\n      <ion-progress-bar value=\"0.11\"></ion-progress-bar>\n\n      <div class=\"padding\">\n        <div class=\"info\">\n          <div>\n            <ion-icon name=\"bulb\"></ion-icon>\n          </div>\n          <p *ngIf=\"slideIndex === 0\" class=\"animated fadeIn\">\n            Oportunidade única de desenvolver habilidades do idioma no país onde\n            ele é falado, com professores especializados e apoio de material\n            didático e ótimas instalações. Todas as escolas são de excelente\n            qualidade e escolhidas criteriosamente pela equipe de experts da\n            Experimento.\n          </p>\n          <p *ngIf=\"slideIndex === 1\" class=\"animated fadeIn\">\n            Que tal aprimorar o idioma com uma experiência de estudo e trabalho\n            no exterior? Já pensou em receber um salário em dólar ou euro e de\n            quebra custear uma parte das despesas durante o seu intercâmbio no\n            exterior? ou até mesmo fazer um trabalho voluntário?\n          </p>\n        </div>\n        <ion-button\n          size=\"large\"\n          expand=\"full\"\n          shape=\"round\"\n          color=\"verdetop\"\n          class=\"animated bounceIn\"\n          (click)=\"continue()\"\n        >\n          <span *ngIf=\"!continuarLoading && !sucesso\">Continuar</span>\n          <ion-spinner\n            name=\"crescent\"\n            *ngIf=\"continuarLoading && !sucesso\"\n          ></ion-spinner>\n          <ion-icon\n            name=\"thumbs-up\"\n            *ngIf=\"sucesso\"\n            class=\"animated slideInUp\"\n          ></ion-icon>\n        </ion-button>\n      </div>\n    </div>\n  </div>\n</ion-content>\n"
 
 /***/ }),
 
@@ -85,41 +85,18 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
-/* harmony import */ var _programas_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../programas.service */ "./src/app/programas.service.ts");
-
 
 
 
 var HomePage = /** @class */ (function () {
-    function HomePage(router, programasService) {
+    function HomePage(router) {
         this.router = router;
-        this.programasService = programasService;
         this.slideIndex = 0;
         this.slideOpts = {
             speed: 400
         };
         this.continuarLoading = false;
         this.sucesso = false;
-        var programa = {
-            tipoInter: "E",
-            faixaEtaria: 10,
-            acomodacao: ["RE"],
-            nivel: [],
-            escolaridade: ["EM"],
-            destinos: [],
-            duracao: 4
-        };
-        /*
-        this.programasService.envia(programa)
-          .subscribe(
-            (produto) => {
-              console.log('sucesso!');
-              console.log(produto);
-            },
-            () => {
-              console.log('deu ruim');
-            }
-          ,);*/
     }
     HomePage.prototype.continue = function () {
         var _this = this;
@@ -155,46 +132,9 @@ var HomePage = /** @class */ (function () {
             template: __webpack_require__(/*! ./home.page.html */ "./src/app/home/home.page.html"),
             styles: [__webpack_require__(/*! ./home.page.scss */ "./src/app/home/home.page.scss")]
         }),
-        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"],
-            _programas_service__WEBPACK_IMPORTED_MODULE_3__["ProgramasService"]])
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"]])
     ], HomePage);
     return HomePage;
-}());
-
-
-
-/***/ }),
-
-/***/ "./src/app/programas.service.ts":
-/*!**************************************!*\
-  !*** ./src/app/programas.service.ts ***!
-  \**************************************/
-/*! exports provided: ProgramasService */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ProgramasService", function() { return ProgramasService; });
-/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
-/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm5/http.js");
-
-
-
-var ProgramasService = /** @class */ (function () {
-    function ProgramasService(_http) {
-        this._http = _http;
-    }
-    ProgramasService.prototype.envia = function (programa) {
-        return this._http.post('http://34.201.76.22:7854/getTipo', programa);
-    };
-    ProgramasService = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
-        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])({
-            providedIn: 'root'
-        }),
-        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpClient"]])
-    ], ProgramasService);
-    return ProgramasService;
 }());
 
 

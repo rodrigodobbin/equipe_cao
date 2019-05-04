@@ -243,18 +243,7 @@
         class="animated fadeIn"
         (click)="saibaMais()"
       >
-        <span *ngIf="!continuarLoading && !sucesso"
-          >Receber mais informações</span
-        >
-        <ion-spinner
-          name="crescent"
-          *ngIf="continuarLoading && !sucesso"
-        ></ion-spinner>
-        <ion-icon
-          name="thumbs-up"
-          *ngIf="sucesso"
-          class="animated slideInUp"
-        ></ion-icon>
+        <span>Receber mais informações</span>
       </ion-button>
     </ion-card-content>
   </ion-card>
