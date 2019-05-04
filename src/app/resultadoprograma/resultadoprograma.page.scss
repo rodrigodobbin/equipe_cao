@@ -1,0 +1,117 @@
+.logo {
+  width: 50%;
+  display: block;
+  margin: 0 auto;
+}
+
+.argola {
+  position: fixed;
+  top: -34%;
+  left: -5%;
+  width: 110%;
+  height: 64%;
+  border-radius: 50%;
+  opacity: 0.6;
+  border: 55px solid;
+  &.rosa {
+    border-color: var(--ion-color-rosatop);
+  }
+  &.verde {
+    border-color: var(--ion-color-verdetop);
+  }
+  &.azul {
+    border-color: var(--ion-color-azultop);
+  }
+  &.roxo {
+    border-color: var(--ion-color-roxotop);
+  }
+  &.laranja {
+    border-color: var(--ion-color-laranjatop);
+  }
+  &.azulClaro {
+    border-color: var(--ion-color-azulclarotop);
+  }
+}
+
+ion-card {
+  --background: #fff;
+  .container {
+    margin-bottom: 1rem;
+    text-align: center;
+    padding: 1.5rem 0.5rem 0.5rem 0.5rem;
+    &.rosa {
+      background: var(--ion-color-rosatop);
+    }
+    &.verde {
+      background: var(--ion-color-verdetop);
+    }
+    &.azul {
+      background: var(--ion-color-azultop);
+    }
+    &.roxo {
+      background: var(--ion-color-roxotop);
+    }
+    &.laranja {
+      background: var(--ion-color-laranjatop);
+    }
+    &.azulClaro {
+      background: var(--ion-color-azulclarotop);
+    }
+    p {
+      margin: 0;
+      margin-bottom: 10px;
+      color: #fff;
+      font-size: 0.7rem;
+    }
+    h3 {
+      margin: 0;
+      color: #fff;
+      font-size: 0.9rem;
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+  }
+  .text {
+    p {
+      margin-bottom: 1rem;
+    }
+  }
+}
+
+ion-card-header {
+  position: relative;
+  div {
+    position: absolute;
+    left: 21px;
+    bottom: 21px;
+    &.rosa {
+      background: var(--ion-color-rosatop);
+    }
+    &.verde {
+      background: var(--ion-color-verdetop);
+    }
+    &.azul {
+      background: var(--ion-color-azultop);
+    }
+    &.roxo {
+      background: var(--ion-color-roxotop);
+    }
+    &.laranja {
+      background: var(--ion-color-laranjatop);
+    }
+    &.azulClaro {
+      background: var(--ion-color-azulclarotop);
+    }
+    h1 {
+      margin: 0;
+      color: #fff;
+      font-size: 1.2rem;
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+  }
+
+  ion-button {
+    text-transform: none;
+  }
+}

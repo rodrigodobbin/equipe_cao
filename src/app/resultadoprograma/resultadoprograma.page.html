@@ -1,166 +1,251 @@
-
 <ion-content>
-  <div class="resultado">
-      <ion-card>
-          <ion-card-header>
-            <ion-img src='../../assets/img/programa-universitario.jpeg'></ion-img>
-            
-            <div class='blue_container'><h1>PROGRAMA UNIVERSITÁRIO</h1></div>
-          </ion-card-header>
-         
-          <ion-card-content>
-                     
-           <div class="blue_container">
-             <p>Obrigado por utilizar o nosso aplicativo, ficamos felizes em ajudá-lo!</p>
-             <p>Encontre a oportunidade que você tanto sonhou de estudar no exterior!</p>
-             
-           </div>
-           
-           <div class="white_container">
-            <p>Seu primeiro ano de graduação começa aqui.</p>
-   
-            <p>Os Programas Universitários são a melhor alternativa para
-            jovens e adultos que desejam viver uma experiência em outro
-            país para desenvolver uma carreira sólidas e prospera.</p>
-   
-            <p>Conte com a orientação de nossos especialistas para fazer
-            um planejamento claro e com investimento compatível para
-            garantir sua vaga em um de nossos programas:</p>
-             
-            <div></div>
-            <div></div>
-            <div></div>
-            <p>- Study Abroad - Intercâmbio e graduação</p>
-            <p>- Graduação no exterior</p>
-            
-   
-            <ion-button
-            size="large"
-            expand="full"
-            shape="round"
-            color="roxotop"
-            class="animated fadeIn"
-            (click)="continue()"
-            [disabled]="!genero"
-          >
-            <span *ngIf="!continuarLoading && !sucesso">Receber mais informações</span>
-            <ion-spinner
-              name="crescent"
-              *ngIf="continuarLoading && !sucesso"
-            ></ion-spinner>
-            <ion-icon
-              name="thumbs-up"
-              *ngIf="sucesso"
-              class="animated slideInUp"
-            ></ion-icon>
-          </ion-button>
-        </div>
-          </ion-card-content>
-        </ion-card>
-  </div>
-  
-      
+  <img src="../../assets/img/experimento.png" alt="Experimento" class="logo" />
+  <div class="argola" [ngClass]="tema"></div>
 
-     <div class="question_slider">
-        <div class="container lightblue larger">
-          <ion-slides
-            #slides
-            pager="true"
-            [options]="slideOpts"
-            (ionSlideDidChange)="slideChanged()"
-          >
-            <ion-slide>
-              <h1>Qual seu nível no idioma escolhido?</h1>
-              <div class="circle">
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <ion-avatar>
-                  <img src="../../assets/img/basico.png" />
-                </ion-avatar>
-              </div>
-              <h1>Básico</h1>
-            </ion-slide>
-            <ion-slide>
-              <h1>Qual seu nível no idioma escolhido?</h1>
-              <div class="circle">
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <ion-avatar>
-                  <img src="../../assets/img/intermediario.png" />
-                </ion-avatar>
-              </div>
-              <h1>Intermediário</h1>
-            </ion-slide>
-            <ion-slide>
-                <h1>Qual seu nível no idioma escolhido?</h1>
-                <div class="circle">
-                  <div></div>
-                  <div></div>
-                  <div></div>
-                  <div></div>
-                  <ion-avatar>
-                    <img src="../../assets/img/avancado.png" />
-                  </ion-avatar>
-                </div>
-                <h1>Avançado</h1>
-              </ion-slide>
-          </ion-slides>
-        </div>
-        <div class="container smaller">
-          <ion-progress-bar value="0.8"></ion-progress-bar>
-    
-          <div class="padding">
-            <div class="info">
-              <div>
-                <ion-icon name="bulb"></ion-icon>
-              </div>
-              <p *ngIf="slideIndex === 0" class="animated slideInRight">
-                  Basico - Inglês básico: é quando conseguimos compreender e usar 
-                  expressões familiares e cotidianas, assim como enunciados bem 
-                  simples. Conseguir se apresentar, apresentar os outros, perguntar 
-                  e dar respostas como o local onde vive, as pessoas que conhece e 
-                  as coisas que possui. Resumindo, conseguir se comunicar de modo simples.
-              </p>
-              <p *ngIf="slideIndex === 1" class="animated slideInRight">
-                  Inglês intermediário: Consideramos intermdiário quando é possivel compreender 
-                  as questões principais em textos complexos (assuntos concretos e abstratos), além 
-                  de participações de discussões técnicas na sua área de especialidade.
-              </p>
-  
-              <p *ngIf="slideIndex === 2" class="animated slideInRight">
-                  Avançado  - Inglês avançado: Consideramos a capacidade de compreender 
-                  um vasto número de textos longos e exigentes, reconhecendo os seus 
-                  significados implícitos. Significa  se expressar de forma fluente e 
-                  espontânea sem precisar procurar muito as palavras, usa o idioma de modo 
-                  flexível e eficaz para fins sociais, acadêmicos e profissionais.
-                </p>
-            </div>
-            <ion-button
-              size="large"
-              expand="full"
-              shape="round"
-              color="azulclarotop"
-              class="animated bounceIn"
-              (click)="continue()"
-            >
-              <span *ngIf="!continuarLoading && !sucesso">Continuar</span>
-              <ion-spinner
-                name="crescent"
-                *ngIf="continuarLoading && !sucesso"
-              ></ion-spinner>
-              <ion-icon
-                name="thumbs-up"
-                *ngIf="sucesso"
-                class="animated slideInUp"
-              ></ion-icon>
-            </ion-button>
-          </div>
-        </div>
+  <ion-card>
+    <ion-card-header>
+      <img [src]="'../../assets/img/' + cardImg" />
+
+      <div [ngClass]="tema">
+        <h1>{{ textoHeader }}</h1>
       </div>
-     
-      
+    </ion-card-header>
+
+    <ion-card-content>
+      <div class="container" [ngClass]="tema">
+        <p>
+          Obrigado por utilizar o nosso aplicativo, ficamos felizes em ajudá-lo!
+        </p>
+        <h3>
+          {{ containerText }}
+        </h3>
+      </div>
+
+      <!-- Demi Pair -->
+      <div class="text">
+        <p>
+          Já pensou em em estudar e trabalhar na Austrália?
+        </p>
+        <p>
+          O programa Demi Pair é recomendado para aqueles que desejam aprimorar
+          o inglês com a vantagem de não pagar por 12 semanas de acomodação e
+          refeições.
+        </p>
+        <p>
+          O Demi Pair vai ajudar a família hospedeira nas tarefas do lar e no
+          cuidado de crianças durante 4 horas por dia, no máximo. Vale reforçar
+          que a prioridade nesse programa é o curso de idiomas.
+        </p>
+      </div>
+      <!-- Demi Pair -->
+
+      <!-- AuPair -->
+      <div class="text">
+        <p>
+          Se você adora crianças e tem o sonho de morar fora do país, o programa
+          Au Pair é perfeito para você! Imagine participar de um programa de
+          intercâmbio cultural, passar um ano nos Estados Unidos, morando
+          legalmente com uma família norte-americana e ganhando salário em
+          dólares para cuidar de crianças?
+        </p>
+        <p>
+          Uma imersão cultural completa, você será recebida como um membro da
+          família e terá a oportunidade de fazer um curso a sua escolha,
+          enquanto cuida das crianças, vivendo uma nova cultura e praticando o
+          inglês todos os dias!
+        </p>
+      </div>
+      <!-- AuPair -->
+
+      <!-- High School -->
+      <div class="text">
+        <p>
+          Se você é estudante do ensino médio e quer ter uma experiência
+          incrível no exterior, cursar um ano de High School fora do Brasil será
+          uma oportunidade única na sua vida. Além de todo aprendizado que terá,
+          você não perde o ano e ainda ganha um currículo brilhante!
+        </p>
+        <p>
+          EXPERIMENTE VIVER EM OUTRA LÍNGUA!
+        </p>
+        <p>
+          Onde você gostaria de viver por um ano e ainda por cima aprender outro
+          idioma? Já pensou em fazer um programa High School no Estados Unidos,
+          ou quem sabe na Alemanha? É isso o que o programa de High School da
+          Experimento oferece para você: a oportunidade de tornar você um
+          cidadão do mundo! Conquiste muitos amigos estrangeiros e tenha a
+          oportunidade de viver com uma família fora do Brasil. No seu
+          intercâmbio no exterior, você decide como vai aproveitar seu tempo.
+          LONGE, MAS PERTO: CONTE COM SUPORTE O TEMPO INTEIRO
+        </p>
+        <p>
+          Você pode passar um ano do outro lado do mundo, mas sempre terá alguém
+          conhecido por perto. Seus amigos daqui não vão parar de pedir para
+          você compartilhar fotos, seus amigos de lá vão querer saber como é o
+          Brasil. A Experimento também vai ser sua companhia nesta viagem: há
+          mais de 50 anos no mercado, sabemos tudo o que pode acontecer com um
+          Experimenter (como chamamos nossos intercambistas) e estamos
+          preparados para dar a você todo o suporte necessário. Você será
+          orientado antes, durante e depois do intercâmbio no exterior.
+        </p>
+        <p>
+          Já está se imaginando fazendo posts e dando check-in nos lugares mais
+          lindos do mundo? Então, confira nossos destinos e prepare a mala!
+        </p>
+      </div>
+      <!-- High School -->
+
+      <!-- Trabalho e Estudo -->
+      <div class="text">
+        <p>
+          Que tal aprimorar o idioma com uma experiência de estudo e trabalho no
+          exterior? Já pensou em receber um salário em dólar ou euro e de quebra
+          custear uma parte das despesas durante o seu intercâmbio no exterior?
+        </p>
+        <p>
+          Esse é o momento ideal!
+        </p>
+        <p>
+          Trabalho remunerado no exterior é uma ótima experiência para
+          aperfeiçoar a língua estrangeira, pois além do aprendizado em sala de
+          aula é possível vivenciar situações reais do dia a dia e uma total
+          imersão na cultura do país escolhido. Tudo isso torna a vivência em
+          outro país única e valiosa.
+        </p>
+        <p>
+          Conheça os países onde estão disponíveis essas oportunidades
+          imperdíveis e aproveite para conhecer o novo programa da Experimento,
+          o Demi Pair, um programa de estudo com trabalho na Austrália!
+        </p>
+      </div>
+      <!-- Trabalho e Estudo -->
+
+      <!-- Formação profissional -->
+      <div class="text">
+        <p>
+          Estudar no exterior vai muito além de fazer cursos de idiomas. Não
+          importa se você está iniciando sua vida profissional, pretende fazer
+          uma mudança de rumos ou ambiciona alavancar sua carreira, em qualquer
+          uma dessas condições, os Programas de Extensão Universitária e os
+          Programas Profissionalizantes são recomendados e farão a diferença no
+          seu futuro.
+        </p>
+        <p>
+          Os cursos, com duração de uma semana a dois anos, propõem aprendizagem
+          prática e o aprofundamento em inúmeras áreas de atuação e de estudos
+          de seu interesse, além do desenvolvimento de competências essenciais
+          visando à sua inserção no mercado de trabalho e vantagem competitiva
+          na carreira.
+        </p>
+      </div>
+      <!-- Formação profissional -->
+
+      <!-- Programa Universitário -->
+      <div class="text">
+        <p>Seu primeiro ano de graduação começa aqui.</p>
+
+        <p>
+          Os Programas Universitários são a melhor alternativa para jovens e
+          adultos que desejam viver uma experiência em outro país para
+          desenvolver uma carreira sólidas e prospera.
+        </p>
+
+        <p>
+          Conte com a orientação de nossos especialistas para fazer um
+          planejamento claro e com investimento compatível para garantir sua
+          vaga em um de nossos programas:
+        </p>
+
+        <p>- Study Abroad - Intercâmbio e graduação</p>
+        <p>- Graduação no exterior</p>
+      </div>
+      <!-- Programa Universitário -->
+
+      <!-- Curso de Idiomas -->
+      <div class="text">
+        <p>
+          Se você deseja adquirir fluência em outro idioma, estudar no exterior
+          e fazer curso de idiomas é uma ótima forma de ficar mais próximo da
+          língua que você quer aprender. É comprovado que esta é uma das
+          melhores formas de aprendizado. As situações cotidianas, com o povo
+          local, estimulam o raciocínio na nova língua e enriquecem, também, o
+          entendimento de novos vocábulos, o que garante a combinação perfeita
+          para um aprendizado rápido e duradouro.
+        </p>
+        <p>
+          Para que a sua experiência seja completa é fundamental você contar, no
+          Brasil, com a assessoria de uma agência de intercâmbio que te
+          orientará quanto à escolha da opção de curso de idioma no exterior que
+          melhor atenda às suas expectativas.
+        </p>
+      </div>
+      <!-- Curso de Idiomas -->
+
+      <!-- Programa de férias -->
+      <div class="text">
+        <p>
+          A modalidade Programa de Férias da Experimento foi desenvolvida para
+          jovens de até 18 anos que querem viajar para o exterior, aperfeiçoar
+          um idioma, desenvolver habilidades ou praticar esportes, se divertindo
+          e aprendendo num ambiente internacional.
+        </p>
+        <p>
+          Nossos roteiros incluem além do curso, passeios e inúmeras atividades,
+          apoio e supervisão de líderes Experimento ou monitores locais. É só
+          você dar uma olhada abaixo nos tipos de programa e opções de destinos!
+        </p>
+      </div>
+      <!-- Programa de férias -->
+
+      <!-- Voluntário -->
+      <div class="text">
+        <p>
+          Você deseja ter uma experiência única e que fará diferença na vida de
+          quem realmente precisa? Tem vontade de viajar, ajudar pessoas e ainda
+          aprimorar o idioma no exterior?
+        </p>
+        <p>
+          Se a resposta for positiva, nós temos o programa certo para você!
+        </p>
+        <p>
+          No Trabalho Voluntário no Exterior, além de conhecer um novo país e um
+          novo idioma, você trabalha em benefício de uma causa. O programa de
+          Intercâmbio Voluntário vai além da doação de tempo e dinheiro, busca
+          fazer com que o voluntariado receba muito mais do que ele irá doar
+          durante essa experiência, como novos amigos, conhecimento sobre
+          assuntos críticos que o mundo ainda enfrenta nos dias de hoje,
+          conhecimento e entendimento da cultura local e a possibilidade de
+          fazer a diferença na vida de outra pessoa.
+        </p>
+        <p>
+          Além disso, essa bagagem cultural é cada vez mais valorizada pelas
+          empresas que buscam profissionais com formação mais abrangente.
+        </p>
+      </div>
+      <!-- Voluntário -->
+
+      <ion-button
+        size="large"
+        expand="full"
+        fill="outline"
+        shape="round"
+        color="success"
+        class="animated fadeIn"
+        (click)="saibaMais()"
+      >
+        <span *ngIf="!continuarLoading && !sucesso"
+          >Receber mais informações</span
+        >
+        <ion-spinner
+          name="crescent"
+          *ngIf="continuarLoading && !sucesso"
+        ></ion-spinner>
+        <ion-icon
+          name="thumbs-up"
+          *ngIf="sucesso"
+          class="animated slideInUp"
+        ></ion-icon>
+      </ion-button>
+    </ion-card-content>
+  </ion-card>
 </ion-content>
