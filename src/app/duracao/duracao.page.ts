@@ -76,13 +76,9 @@ export class DuracaoPage implements OnInit {
     this.programaService.envia(programa).subscribe(
       programa => {
         this.sucesso = true;
-
+        console.log(programa);
         setTimeout(() => {
-          this.router.navigate([
-            `/resultadoprograma/${
-              variavel[programa.cursoCode ? programa.cursoCode : ""]
-            }`
-          ]);
+          this.router.navigate([`/resultadoprograma/${programa.cursoCode}`]);
         }, 500);
 
         setTimeout(() => {
