@@ -1,9 +1,113 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>idade</ion-title>
-  </ion-toolbar>
-</ion-header>
-
 <ion-content>
+  <div class="question_slider">
+    <div class="container blue larger">
+      <ion-slides
+        #slides
+        pager="false"
+        [options]="slideOpts"
+        (ionSlideDidChange)="slideChanged()"
+      >
+        <ion-slide>
+          <h1>
+            <span *ngIf="!dia && !mes && !ano"
+              >Diz aê, qual o dia do seu nascimento...</span
+            >
+            <span *ngIf="dia && !mes && !ano"
+              >Boa! agora precisamos do mês, escolhe aê...</span
+            >
+            <span *ngIf="dia && mes && !ano">Agora só falta o ano...</span>
+            <span *ngIf="dia && mes && ano"
+              >Pronto, acertei? Agora podemos seguir...</span
+            >
+          </h1>
+          <div class="circle">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <ion-avatar>
+              <h2 class="number">
+                <ion-spinner name="dots" *ngIf="!faixaEtaria"></ion-spinner>
+                <span *ngIf="faixaEtaria">{{ faixaEtaria }}</span>
+              </h2>
+            </ion-avatar>
+            <div
+              class="dia datas animated slideInDown"
+              [ngClass]="{ active: dia }"
+            >
+              <ion-button color="azultop" fill="clear" (click)="escolheDia()">
+                <span *ngIf="!dia">Dia</span>
+                <span *ngIf="dia">{{ dia }}</span>
+              </ion-button>
+            </div>
+            <div
+              class="mes datas animated slideInUp"
+              [ngClass]="{ active: mes }"
+            >
+              <ion-button
+                color="azultop"
+                fill="clear"
+                (click)="escolheMes()"
+                [disabled]="!dia"
+              >
+                <span *ngIf="!mes">Mês</span>
+                <span *ngIf="mes">{{ mes }}</span>
+              </ion-button>
+            </div>
+            <div
+              class="ano datas animated slideInRight"
+              [ngClass]="{ active: ano }"
+            >
+              <ion-button
+                color="azultop"
+                fill="clear"
+                (click)="escolheAno()"
+                [disabled]="!dia || !mes"
+              >
+                <span *ngIf="!ano">Ano</span>
+                <span *ngIf="ano">{{ ano }}</span>
+              </ion-button>
+            </div>
+          </div>
+        </ion-slide>
+      </ion-slides>
+    </div>
+    <div class="container smaller">
+      <ion-progress-bar value="0.3"></ion-progress-bar>
 
+      <div class="padding">
+        <div class="info">
+          <div>
+            <ion-icon name="bulb"></ion-icon>
+          </div>
+          <p class="animated fadeIn">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde error
+            cupiditate similique rem, nemo adipisci voluptatem fugiat voluptates
+            officia quidem tenetur rerum et sunt autem ea iure consectetur
+            minima dolorum.
+          </p>
+        </div>
+        <ion-button
+          size="large"
+          expand="full"
+          shape="round"
+          color="azultop"
+          class="animated fadeIn"
+          (click)="continue()"
+          [disabled]="!dia || !mes || !ano"
+        >
+          <span *ngIf="!continuarLoading && !sucesso">Continuar</span>
+          <ion-spinner
+            name="crescent"
+            *ngIf="continuarLoading && !sucesso"
+          ></ion-spinner>
+          <ion-icon
+            name="thumbs-up"
+            *ngIf="sucesso"
+            class="animated slideInUp"
+          ></ion-icon>
+        </ion-button>
+      </div>
+    </div>
+  </div>
 </ion-content>

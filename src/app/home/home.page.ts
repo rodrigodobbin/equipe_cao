@@ -1,6 +1,5 @@
 import { Component, ViewChild } from "@angular/core";
-import { Router, NavigationExtras } from "@angular/router";
-import { NavController } from "@ionic/angular";
+import { Router } from "@angular/router";
 
 @Component({
   selector: "app-home",
@@ -10,9 +9,9 @@ import { NavController } from "@ionic/angular";
 export class HomePage {
   @ViewChild("slides") slides;
 
-  constructor(private router: Router, private navCtrl: NavController) {}
+  constructor(private router: Router) {}
 
-  sendObj = {};
+  tipoInter;
 
   slideIndex = 0;
   slideOpts = {
@@ -28,20 +27,14 @@ export class HomePage {
     this.continuarLoading = true;
     const tipoInter = this.slideIndex === 0 ? "E" : "TE";
 
-    this.sendObj["tipoInter"] = tipoInter;
+    this.tipoInter = tipoInter;
 
     setTimeout(() => {
       this.sucesso = true;
     }, 600);
 
     setTimeout(() => {
-      let navigationExtras: NavigationExtras = {
-        queryParams: {
-          sendObj: this.sendObj
-        }
-      };
-      this.router.navigate([`/idade/${this.sendObj["tipoInter"]}`]);
-      // this.navCtrl.navigateForward("/idade", navigationExtras);
+      this.router.navigate([`/idade/${this.tipoInter}`]);
     }, 1200);
 
     setTimeout(() => {

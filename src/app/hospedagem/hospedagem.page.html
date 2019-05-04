@@ -1,0 +1,95 @@
+<ion-content>
+  <div class="question_slider">
+    <div class="container purple larger">
+      <ion-slides
+        #slides
+        pager="false"
+        [options]="slideOpts"
+        (ionSlideDidChange)="slideChanged()"
+      >
+        <ion-slide>
+          <h1>Quer ficar hospedado onde?</h1>
+          <div class="circle">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <ion-avatar>
+              <p class="text">{{ acomodacaoTexto }}</p>
+            </ion-avatar>
+            <div
+              class="casa hospedagens animated zoomInRight"
+              [ngClass]="{ active: acomodacao === 'CF' }"
+              (click)="escolheAcomodacao('casa')"
+            >
+              <img src="../../assets/img/home.png" />
+            </div>
+            <div
+              class="estudantil hospedagens animated zoomInUp"
+              [ngClass]="{ active: acomodacao === 'RE' }"
+              (click)="escolheAcomodacao('estudantil')"
+            >
+              <img src="../../assets/img/escola.png" />
+            </div>
+            <div
+              class="ap hospedagens animated zoomInDown"
+              [ngClass]="{ active: acomodacao === 'A' }"
+              (click)="escolheAcomodacao('ap')"
+            >
+              <img src="../../assets/img/ap.png" />
+            </div>
+            <div
+              class="hotel hospedagens animated zoomInLeft"
+              [ngClass]="{ active: acomodacao === 'H' }"
+              (click)="escolheAcomodacao('hotel')"
+            >
+              <img src="../../assets/img/hotel.png" />
+            </div>
+            <div
+              class="campus hospedagens animated zoomInUp"
+              [ngClass]="{ active: acomodacao === 'CU' }"
+              (click)="escolheAcomodacao('campus')"
+            >
+              <img src="../../assets/img/campus.png" />
+            </div>
+          </div>
+        </ion-slide>
+      </ion-slides>
+    </div>
+    <div class="container smaller">
+      <ion-progress-bar value="0.45"></ion-progress-bar>
+
+      <div class="padding">
+        <div class="info">
+          <div>
+            <ion-icon name="bulb"></ion-icon>
+          </div>
+          <p class="animated fadeIn">
+            A escolha do local onde você ficará hospedado poderá influenciar no
+            quanto você irá utilizar o idioma no dia a dia.
+          </p>
+        </div>
+        <ion-button
+          size="large"
+          expand="full"
+          shape="round"
+          color="roxotop"
+          class="animated fadeIn"
+          (click)="continue()"
+          [disabled]="!acomodacao"
+        >
+          <span *ngIf="!continuarLoading && !sucesso">Continuar</span>
+          <ion-spinner
+            name="crescent"
+            *ngIf="continuarLoading && !sucesso"
+          ></ion-spinner>
+          <ion-icon
+            name="thumbs-up"
+            *ngIf="sucesso"
+            class="animated slideInUp"
+          ></ion-icon>
+        </ion-button>
+      </div>
+    </div>
+  </div>
+</ion-content>

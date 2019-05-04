@@ -7,6 +7,10 @@ const routes: Routes = [
   {
     path: "idade/:tipoInter",
     loadChildren: "./idade/idade.module#IdadePageModule"
+  },
+  {
+    path: "hospedagem/:tipoInter/:faixaEtaria",
+    loadChildren: "./hospedagem/hospedagem.module#HospedagemPageModule"
   }
 ];
 
