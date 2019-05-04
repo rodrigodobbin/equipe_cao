@@ -28,7 +28,8 @@ const routes: Routes = [
     path:
       "genero/:tipoInter/:faixaEtaria/:acomodacao/:escolaridade/:pais/:nivel",
     loadChildren: "./genero/genero.module#GeneroPageModule"
-  }
+  },
+  { path: 'resultadoprograma', loadChildren: './resultadoprograma/resultadoprograma.module#ResultadoprogramaPageModule' }
 ];
 
 @NgModule({
