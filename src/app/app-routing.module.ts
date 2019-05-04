@@ -7,7 +7,8 @@ const routes: Routes = [
   {
     path: "idade/:tipoInter",
     loadChildren: "./idade/idade.module#IdadePageModule"
-  }
+  },
+  { path: 'formacao', loadChildren: './formacao/formacao.module#FormacaoPageModule' }
 ];
 
 @NgModule({

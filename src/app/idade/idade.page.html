@@ -5,5 +5,26 @@
 </ion-header>
 
 <ion-content>
+  <div class="question-slider"></div>
+
+  <ion-button
+          size="large"
+          expand="full"
+          shape="round"
+          color="verdetop"
+          class="animated bounceIn"
+          (click)="continue()"
+        >
+          <span *ngIf="!continuarLoading && !sucesso">Continuar</span>
+          <ion-spinner
+            name="crescent"
+            *ngIf="continuarLoading && !sucesso"
+          ></ion-spinner>
+          <ion-icon
+            name="thumbs-up"
+            *ngIf="sucesso"
+            class="animated slideInUp"
+          ></ion-icon>
+        </ion-button>
 
 </ion-content>

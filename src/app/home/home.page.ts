@@ -1,6 +1,8 @@
 import { Component, ViewChild } from "@angular/core";
 import { Router, NavigationExtras } from "@angular/router";
 import { NavController } from "@ionic/angular";
+import { ProgramasService } from '../programas.service';
+import { Programa } from 'src/model/programa';
 
 @Component({
   selector: "app-home",
@@ -10,7 +12,28 @@ import { NavController } from "@ionic/angular";
 export class HomePage {
   @ViewChild("slides") slides;
 
-  constructor(private router: Router, private navCtrl: NavController) {}
+  constructor(private router: Router, private navCtrl: NavController, private programasService: ProgramasService) {
+    let programa: Programa = {
+      tipoInter : 'E',
+      faixaEtaria: 10,
+      acomodacao: ['RE'],
+      nivel: [],
+      escolaridade: ['EM'],
+      destinos: [],
+      duracao: 4
+    }
+    /*
+    this.programasService.envia(programa)
+      .subscribe(
+        (produto) => {
+          console.log('sucesso!');
+          console.log(produto);
+        },
+        () => {
+          console.log('deu ruim');
+        }
+      ,);*/
+  }
 
   sendObj = {};
 
