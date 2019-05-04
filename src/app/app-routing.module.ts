@@ -29,12 +29,15 @@ const routes: Routes = [
       "genero/:tipoInter/:faixaEtaria/:acomodacao/:escolaridade/:pais/:nivel",
     loadChildren: "./genero/genero.module#GeneroPageModule"
   },
+
   {
     path:
       "crianca/:tipoInter/:faixaEtaria/:acomodacao/:escolaridade/:pais/:nivel/:genero",
     loadChildren: "./crianca/crianca.module#CriancaPageModule"
   },
-  { path: 'crianca', loadChildren: './crianca/crianca.module#CriancaPageModule' },
+
+  { path: 'resultadoprograma', loadChildren: './resultadoprograma/resultadoprograma.module#ResultadoprogramaPageModule' }
+
 ];
 
 @NgModule({
