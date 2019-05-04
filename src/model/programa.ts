@@ -6,5 +6,8 @@ export interface Programa {
     nivel: string[],
     duracao: number,
     acomodacao: string[],
-    curso?: string
+    gostaCrianca: boolean,
+    sexo: string,
+    curso?: string,
+    cursoCode?: number
 }

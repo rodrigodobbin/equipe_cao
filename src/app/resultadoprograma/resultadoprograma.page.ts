@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-resultadoprograma',
@@ -7,9 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ResultadoprogramaPage implements OnInit {
 
-  constructor() { }
+  tipoPrograma;
+
+  constructor(private actRoute: ActivatedRoute) { }
 
   ngOnInit() {
+
+    this.tipoPrograma = this.actRoute.snapshot.params["tipoPrograma"];
+    console.log("abacate roxo " + this.tipoPrograma);
+
   }
 
 }

@@ -41,7 +41,7 @@ const routes: Routes = [
   },
 
   {
-    path: "resultadoprograma",
+    path: "resultadoprograma/:tipoPrograma",
     loadChildren:
       "./resultadoprograma/resultadoprograma.module#ResultadoprogramaPageModule"
   }
