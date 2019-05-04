@@ -1,0 +1,190 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Tempo de curso</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="animated slideInUp container">
+    <ion-button
+      shape="round"
+      color="dark"
+      (click)="escolheDuracao(2)"
+      *ngIf="duracao !== 2"
+    >
+      2 Semanas
+    </ion-button>
+    <ion-button
+      shape="round"
+      color="laranjatop"
+      (click)="escolheDuracao(0)"
+      *ngIf="duracao === 2"
+    >
+      2 Semanas
+    </ion-button>
+    <img src="../../assets/img/relogio.png" />
+  </div>
+
+  <div class="animated slideInUp container">
+    <img src="../../assets/img/camera.png" />
+    <ion-button
+      shape="round"
+      color="dark"
+      (click)="escolheDuracao(4)"
+      *ngIf="duracao !== 4"
+    >
+      4 Semanas
+    </ion-button>
+    <ion-button
+      shape="round"
+      color="laranjatop"
+      (click)="escolheDuracao(0)"
+      *ngIf="duracao === 4"
+    >
+      4 Semanas
+    </ion-button>
+  </div>
+
+  <div class="animated slideInUp container">
+    <ion-button
+      shape="round"
+      color="dark"
+      (click)="escolheDuracao(6)"
+      *ngIf="duracao !== 6"
+    >
+      6 Semanas
+    </ion-button>
+    <ion-button
+      shape="round"
+      color="laranjatop"
+      (click)="escolheDuracao(0)"
+      *ngIf="duracao === 6"
+    >
+      6 Semanas
+    </ion-button>
+    <img src="../../assets/img/aviao.png" />
+  </div>
+
+  <div class="animated slideInUp container">
+    <img src="../../assets/img/cartao.png" />
+    <ion-button
+      shape="round"
+      color="dark"
+      (click)="escolheDuracao(12)"
+      *ngIf="duracao !== 12"
+    >
+      12 Semanas
+    </ion-button>
+    <ion-button
+      shape="round"
+      color="laranjatop"
+      (click)="escolheDuracao(0)"
+      *ngIf="duracao === 12"
+    >
+      12 Semanas
+    </ion-button>
+  </div>
+
+  <div class="animated slideInUp container">
+    <ion-button
+      shape="round"
+      color="dark"
+      (click)="escolheDuracao(24)"
+      *ngIf="duracao !== 24"
+    >
+      24 Semanas
+    </ion-button>
+    <ion-button
+      shape="round"
+      color="laranjatop"
+      (click)="escolheDuracao(0)"
+      *ngIf="duracao === 24"
+    >
+      24 Semanas
+    </ion-button>
+    <img src="../../assets/img/id.png" />
+  </div>
+
+  <div class="animated slideInUp container">
+    <img src="../../assets/img/globo.png" />
+    <ion-button
+      shape="round"
+      color="dark"
+      (click)="escolheDuracao(36)"
+      *ngIf="duracao !== 36"
+    >
+      36 Semanas
+    </ion-button>
+    <ion-button
+      shape="round"
+      color="laranjatop"
+      (click)="escolheDuracao(0)"
+      *ngIf="duracao === 36"
+    >
+      36 Semanas
+    </ion-button>
+  </div>
+
+  <div class="animated slideInUp container">
+    <ion-button
+      shape="round"
+      color="dark"
+      (click)="escolheDuracao(52)"
+      *ngIf="duracao !== 52"
+    >
+      52 Semanas
+    </ion-button>
+    <ion-button
+      shape="round"
+      color="laranjatop"
+      (click)="escolheDuracao(0)"
+      *ngIf="duracao === 52"
+    >
+      52 Semanas
+    </ion-button>
+    <img src="../../assets/img/musica.png" />
+  </div>
+
+  <div class="animated slideInUp container">
+    <img src="../../assets/img/feliz.png" />
+    <ion-button
+      shape="round"
+      color="dark"
+      (click)="escolheDuracao(156)"
+      *ngIf="duracao !== 156"
+    >
+      156 Semanas
+    </ion-button>
+    <ion-button
+      shape="round"
+      color="laranjatop"
+      (click)="escolheDuracao(0)"
+      *ngIf="duracao === 156"
+    >
+      156 Semanas
+    </ion-button>
+  </div>
+
+  <div class="buttonDiv">
+    <ion-button
+      size="large"
+      expand="full"
+      shape="round"
+      color="laranjatop"
+      class="animated fadeIn"
+      (click)="continue()"
+      [disabled]="duracao === 0"
+    >
+      <span *ngIf="!continuarLoading && !sucesso">Finalizar</span>
+      <ion-spinner
+        name="crescent"
+        *ngIf="continuarLoading && !sucesso"
+      ></ion-spinner>
+      <ion-icon
+        name="thumbs-up"
+        *ngIf="sucesso"
+        class="animated slideInUp"
+      ></ion-icon>
+    </ion-button>
+  </div>
+</ion-content>

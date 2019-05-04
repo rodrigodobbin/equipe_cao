@@ -1,0 +1,19 @@
+ion-toolbar {
+  --background: var(--ion-color-laranjatop);
+}
+
+ion-title {
+  text-align: center;
+  --color: #fff;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  margin: 2rem 0;
+}
+
+.buttonDiv {
+  padding: 2rem;
+}

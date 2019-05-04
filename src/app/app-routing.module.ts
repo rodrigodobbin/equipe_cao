@@ -28,6 +28,11 @@ const routes: Routes = [
     path:
       "genero/:tipoInter/:faixaEtaria/:acomodacao/:escolaridade/:pais/:nivel",
     loadChildren: "./genero/genero.module#GeneroPageModule"
+  },
+  {
+    path:
+      "duracao/:tipoInter/:faixaEtaria/:acomodacao/:escolaridade/:pais/:nivel/:genero/:gostaCrianca",
+    loadChildren: "./duracao/duracao.module#DuracaoPageModule"
   }
 ];
 

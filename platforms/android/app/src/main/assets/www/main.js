@@ -833,13 +833,37 @@ module.exports = webpackAsyncContext;
 /***/ (function(module, exports, __webpack_require__) {
 
 var map = {
+	"./duracao/duracao.module": [
+		"./src/app/duracao/duracao.module.ts",
+		"duracao-duracao-module"
+	],
+	"./formacao/formacao.module": [
+		"./src/app/formacao/formacao.module.ts",
+		"formacao-formacao-module"
+	],
+	"./genero/genero.module": [
+		"./src/app/genero/genero.module.ts",
+		"genero-genero-module"
+	],
 	"./home/home.module": [
 		"./src/app/home/home.module.ts",
 		"home-home-module"
 	],
+	"./hospedagem/hospedagem.module": [
+		"./src/app/hospedagem/hospedagem.module.ts",
+		"hospedagem-hospedagem-module"
+	],
 	"./idade/idade.module": [
 		"./src/app/idade/idade.module.ts",
 		"idade-idade-module"
+	],
+	"./idioma/idioma.module": [
+		"./src/app/idioma/idioma.module.ts",
+		"idioma-idioma-module"
+	],
+	"./pais/pais.module": [
+		"./src/app/pais/pais.module.ts",
+		"pais-pais-module"
 	]
 };
 function webpackAsyncContext(req) {
@@ -886,6 +910,30 @@ var routes = [
     {
         path: "idade/:tipoInter",
         loadChildren: "./idade/idade.module#IdadePageModule"
+    },
+    {
+        path: "hospedagem/:tipoInter/:faixaEtaria",
+        loadChildren: "./hospedagem/hospedagem.module#HospedagemPageModule"
+    },
+    {
+        path: "formacao/:tipoInter/:faixaEtaria/:acomodacao",
+        loadChildren: "./formacao/formacao.module#FormacaoPageModule"
+    },
+    {
+        path: "pais/:tipoInter/:faixaEtaria/:acomodacao/:escolaridade",
+        loadChildren: "./pais/pais.module#PaisPageModule"
+    },
+    {
+        path: "idioma/:tipoInter/:faixaEtaria/:acomodacao/:escolaridade/:pais",
+        loadChildren: "./idioma/idioma.module#IdiomaPageModule"
+    },
+    {
+        path: "genero/:tipoInter/:faixaEtaria/:acomodacao/:escolaridade/:pais/:nivel",
+        loadChildren: "./genero/genero.module#GeneroPageModule"
+    },
+    {
+        path: "duracao/:tipoInter/:faixaEtaria/:acomodacao/:escolaridade/:pais/:nivel/:genero/:gostaCrianca",
+        loadChildren: "./duracao/duracao.module#DuracaoPageModule"
     }
 ];
 var AppRoutingModule = /** @class */ (function () {
@@ -986,6 +1034,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _ionic_native_status_bar_ngx__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @ionic-native/status-bar/ngx */ "./node_modules/@ionic-native/status-bar/ngx/index.js");
 /* harmony import */ var _app_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./app.component */ "./src/app/app.component.ts");
 /* harmony import */ var _app_routing_module__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./app-routing.module */ "./src/app/app-routing.module.ts");
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm5/http.js");
+
 
 
 
@@ -1002,7 +1052,7 @@ var AppModule = /** @class */ (function () {
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["NgModule"])({
             declarations: [_app_component__WEBPACK_IMPORTED_MODULE_7__["AppComponent"]],
             entryComponents: [],
-            imports: [_angular_platform_browser__WEBPACK_IMPORTED_MODULE_2__["BrowserModule"], _ionic_angular__WEBPACK_IMPORTED_MODULE_4__["IonicModule"].forRoot(), _app_routing_module__WEBPACK_IMPORTED_MODULE_8__["AppRoutingModule"]],
+            imports: [_angular_platform_browser__WEBPACK_IMPORTED_MODULE_2__["BrowserModule"], _ionic_angular__WEBPACK_IMPORTED_MODULE_4__["IonicModule"].forRoot(), _angular_common_http__WEBPACK_IMPORTED_MODULE_9__["HttpClientModule"], _app_routing_module__WEBPACK_IMPORTED_MODULE_8__["AppRoutingModule"]],
             providers: [
                 _ionic_native_status_bar_ngx__WEBPACK_IMPORTED_MODULE_6__["StatusBar"],
                 _ionic_native_splash_screen_ngx__WEBPACK_IMPORTED_MODULE_5__["SplashScreen"],

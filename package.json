@@ -1,8 +1,8 @@
 {
-  "name": "equipe_cao",
-  "version": "0.0.1",
-  "author": "Ionic Framework",
-  "homepage": "https://ionicframework.com/",
+  "name": "experimentando",
+  "version": "0.1.0",
+  "author": "Equipe_cao",
+  "homepage": "https://www.experimento.com.br",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
