@@ -1,0 +1,44 @@
+ion-content {
+  --background: rgba(202, 18, 106, 0.4);
+}
+
+.logo {
+  width: 50%;
+  display: block;
+  margin: 30% auto 0;
+  position: relative;
+}
+
+.argola {
+  position: fixed;
+  top: -27%;
+  left: -2%;
+  width: 135%;
+  height: 64%;
+  border-radius: 50%;
+  background: #fff;
+}
+
+ion-button {
+  text-transform: none;
+  margin-top: 35%;
+}
+
+.obrigado {
+  position: relative;
+  margin: 0 auto;
+  width: 40%;
+  text-align: center;
+  background: var(--ion-color-rosatop);
+  padding: 0.5rem;
+  h3 {
+    color: #fff;
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin: 0;
+  }
+}
+
+.padding {
+  padding: 2rem;
+}

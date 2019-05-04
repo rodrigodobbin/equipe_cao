@@ -1,7 +1,5 @@
 import { Component, ViewChild } from "@angular/core";
 import { Router } from "@angular/router";
-import { ProgramasService } from "../programas.service";
-import { Programa } from "src/model/programa";
 
 @Component({
   selector: "app-home",
@@ -11,31 +9,7 @@ import { Programa } from "src/model/programa";
 export class HomePage {
   @ViewChild("slides") slides;
 
-  constructor(
-    private router: Router,
-    private programasService: ProgramasService
-  ) {
-    let programa: Programa = {
-      tipoInter: "E",
-      faixaEtaria: 10,
-      acomodacao: ["RE"],
-      nivel: [],
-      escolaridade: ["EM"],
-      destinos: [],
-      duracao: 4
-    };
-    /*
-    this.programasService.envia(programa)
-      .subscribe(
-        (produto) => {
-          console.log('sucesso!');
-          console.log(produto);
-        },
-        () => {
-          console.log('deu ruim');
-        }
-      ,);*/
-  }
+  constructor(private router: Router) {}
 
   tipoInter;
 

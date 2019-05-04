@@ -22,7 +22,7 @@
       </div>
 
       <!-- Demi Pair -->
-      <div class="text">
+      <div class="text" *ngIf="tipoPrograma === 'DEMI'">
         <p>
           Já pensou em em estudar e trabalhar na Austrália?
         </p>
@@ -40,7 +40,7 @@
       <!-- Demi Pair -->
 
       <!-- AuPair -->
-      <div class="text">
+      <div class="text" *ngIf="tipoPrograma === 'AU'">
         <p>
           Se você adora crianças e tem o sonho de morar fora do país, o programa
           Au Pair é perfeito para você! Imagine participar de um programa de
@@ -58,7 +58,7 @@
       <!-- AuPair -->
 
       <!-- High School -->
-      <div class="text">
+      <div class="text" *ngIf="tipoPrograma === 'HS'">
         <p>
           Se você é estudante do ensino médio e quer ter uma experiência
           incrível no exterior, cursar um ano de High School fora do Brasil será
@@ -96,7 +96,7 @@
       <!-- High School -->
 
       <!-- Trabalho e Estudo -->
-      <div class="text">
+      <div class="text" *ngIf="tipoPrograma === 'PUPP'">
         <p>
           Que tal aprimorar o idioma com uma experiência de estudo e trabalho no
           exterior? Já pensou em receber um salário em dólar ou euro e de quebra
@@ -121,7 +121,7 @@
       <!-- Trabalho e Estudo -->
 
       <!-- Formação profissional -->
-      <div class="text">
+      <div class="text" *ngIf="tipoPrograma === 'FP'">
         <p>
           Estudar no exterior vai muito além de fazer cursos de idiomas. Não
           importa se você está iniciando sua vida profissional, pretende fazer
@@ -141,7 +141,7 @@
       <!-- Formação profissional -->
 
       <!-- Programa Universitário -->
-      <div class="text">
+      <div class="text" *ngIf="tipoPrograma === 'PU'">
         <p>Seu primeiro ano de graduação começa aqui.</p>
 
         <p>
@@ -162,7 +162,7 @@
       <!-- Programa Universitário -->
 
       <!-- Curso de Idiomas -->
-      <div class="text">
+      <div class="text" *ngIf="tipoPrograma === 'CI'">
         <p>
           Se você deseja adquirir fluência em outro idioma, estudar no exterior
           e fazer curso de idiomas é uma ótima forma de ficar mais próximo da
@@ -182,7 +182,7 @@
       <!-- Curso de Idiomas -->
 
       <!-- Programa de férias -->
-      <div class="text">
+      <div class="text" *ngIf="tipoPrograma === 'PF'">
         <p>
           A modalidade Programa de Férias da Experimento foi desenvolvida para
           jovens de até 18 anos que querem viajar para o exterior, aperfeiçoar
@@ -198,7 +198,7 @@
       <!-- Programa de férias -->
 
       <!-- Voluntário -->
-      <div class="text">
+      <div class="text" *ngIf="tipoPrograma === 'TV'">
         <p>
           Você deseja ter uma experiência única e que fará diferença na vida de
           quem realmente precisa? Tem vontade de viajar, ajudar pessoas e ainda
@@ -223,6 +223,16 @@
         </p>
       </div>
       <!-- Voluntário -->
+
+      <!-- Telefone Experimento -->
+      <div class="text" *ngIf="tipoPrograma === 'TE'">
+        <p>
+          Entre em contato conosco através do número (11) 9876-0986, pois você
+          tem um perfil único e temos certeza que podemos fazer um intercâmbio
+          especial para você.
+        </p>
+      </div>
+      <!-- Telefone Experimento -->
 
       <ion-button
         size="large"

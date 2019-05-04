@@ -41,10 +41,11 @@ const routes: Routes = [
   },
 
   {
-    path: "resultadoprograma",
+    path: "resultadoprograma/:tipoPrograma",
     loadChildren:
       "./resultadoprograma/resultadoprograma.module#ResultadoprogramaPageModule"
-  }
+  },
+  { path: 'obrigado', loadChildren: './obrigado/obrigado.module#ObrigadoPageModule' }
 ];
 
 @NgModule({
